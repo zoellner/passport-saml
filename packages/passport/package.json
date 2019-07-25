@@ -1,6 +1,6 @@
 {
   "name": "passport-saml",
-  "version": "1.2.0",
+  "version": "1.1.0",
   "license": "MIT",
   "keywords": [
     "saml",
@@ -25,12 +25,12 @@
     "type": "git",
     "url": "https://github.com/bergie/passport-saml.git"
   },
-  "main": "packages/passport/lib/passport-saml",
+  "main": "./lib/passport-saml",
   "dependencies": {
     "debug": "^3.1.0",
     "passport-strategy": "*",
     "q": "^1.5.0",
-    "xml-crypto": "^1.4.0",
+    "xml-crypto": "^1.1.4",
     "xml-encryption": "^0.11.0",
     "xml2js": "0.4.x",
     "xmlbuilder": "^11.0.0",
@@ -38,45 +38,19 @@
   },
   "devDependencies": {
     "body-parser": "^1.17.1",
-    "eslint": "^6.5.1",
     "express": "^4.16.2",
-    "lerna": "^3.16.4",
+    "jshint": "^2.10.1",
     "mocha": "^6.0.2",
     "passport": "0.4.x",
     "request": "^2.83.0",
     "should": "*",
     "sinon": "^7.2.7"
   },
-  "private": "true",
   "engines": {
-    "node": ">= 8"
+    "node": ">= 6"
   },
   "scripts": {
-    "test": "yarn workspace passport-saml test",
-    "lint": "yarn workspace passport-saml npx eslint lib",
-    "lint:fix": "yarn workspace passport-saml eslint --fix lib"
-  },
-  "eslintConfig": {
-    "env": {
-      "node": true,
-      "es6": false
-    },
-    "extends": "eslint:recommended",
-    "parserOptions": {
-      "ecmaVersion": 6
-    },
-    "rules": {
-      "no-undefined": "off",
-      "no-unused-vars": "off",
-      "semi": [
-        "error",
-        "always"
-      ]
-    }
-  },
-  "workspaces": {
-    "packages": [
-      "packages/*"
-    ]
+    "test": "mocha",
+    "jshint": "./node_modules/.bin/jshint lib"
   }
 }
