@@ -224,14 +224,14 @@ The default implementation is a simple in-memory cache provider. For multiple se
 To support this scenario you can provide an implementation for a cache provider by providing an object with following functions:
 
 ```javascript
-{
-  async function save(key, value) {
+cacheProvider: {
+  async save(key, value) {
     // save the key with the optional value, returns a Promise that resolves to the the value
   },
-  async function get(key) {
+  async get(key) {
     // returns a Promise that resolves to the value if found, null otherwise
   },
-  async function remove(key) {
+  async remove(key) {
     // removes the key from the cache, returns a Promise that resolves to the
     // key removed, null if no key is removed
   }
