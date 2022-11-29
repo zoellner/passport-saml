@@ -1,6 +1,11 @@
 Node SAML
 =============
+# Deprecation Notice
+Please use `@node-saml/node-saml` going forward. The npm package `node-saml` is now marked as deprecated and won't receive any updates.
 
+NPM versions up to 3.x are based on this repo, the 4.x beta releases are already based on https://github.com/node-saml/node-saml. See that repo for a change log. Please note that there are breaking changes from v3 to v4 (i.e. from the code in this repo to the new repo in the @node-saml organiation).
+
+## Old Readme
 This is a [SAML 2.0](http://en.wikipedia.org/wiki/SAML_2.0) library based on the SAML implementation of [passport-saml](https://github.com/bergie/passport-saml).
 
 v1 is a backward compatible drop-in replacement for the saml.js library from passport-saml.
